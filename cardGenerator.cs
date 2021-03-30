@@ -48,12 +48,7 @@ public class cardGenerator : MonoBehaviour
 
 }
 
-[System.Serializable]
-public class card
-{
-    public string title;
-    public string description;
-}
+
 
 
 public class deckDraw

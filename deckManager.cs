@@ -26,8 +26,17 @@ public class deckManager : MonoBehaviour
     }
 }
 
+// Define Deck class
 [System.Serializable]
 public class Deck
 {
     public List<card> cards;
+}
+
+// Define individual card class
+[System.Serializable]
+public class card
+{
+    public string title;
+    public string description;
 }
