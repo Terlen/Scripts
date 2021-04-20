@@ -31,10 +31,11 @@ public class cardGenerator : MonoBehaviour
 
         // select random cards from deck and add them to drawnCards List
         for (int x = 0; x < drawSize; x++){
+            //Debug.Log("Cards in deck:" + deck.cards.Count);
             int cardNum = Random.Range(0,deck.cards.Count-1);
-            /* Debug.Log(cardNum);
+            Debug.Log("cardNum:" + cardNum);
             Debug.Log(drawnCards.cards.Count);
-            Debug.Log(deck.cards[cardNum]); */
+            Debug.Log(deck.cards[cardNum]);
             drawnCards.cards.Add(deck.cards[cardNum]);
             deck.cards.RemoveAt(cardNum);
         }

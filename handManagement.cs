@@ -8,7 +8,7 @@ public class handManagement : MonoBehaviour
     public GameObject cardPrefab;
     public GameObject hand;
     public GameObject Deck;
-    public Deck deck;
+    //public Deck deck;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +23,12 @@ public class handManagement : MonoBehaviour
     }
 
     public void drawCard(int numCards){
+        Debug.Log("This is the drawCard method being called");
+        
+        Deck deck = Deck.GetComponent<deckManager>().deck;
+        Debug.Log(deck.cards[0].title);
         deckDraw pull = Deck.GetComponent<cardGenerator>().randomDraw(numCards, deck);
-        //Debug.Log(pull.cards[0].title);
+        Debug.Log("First card title: " + pull.cards[0].title);
         
         //GameObject[] hand = new GameObject[10];
         Vector2 leftOffset = new Vector2(2f,0);

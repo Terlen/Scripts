@@ -7,16 +7,17 @@ public class deckManager : MonoBehaviour
 {
     string path;
     string json;
+    public Deck deck;
     // Start is called before the first frame update
     void Start()
     {
         // Initialize starter deck from card data in json file
-        Deck deck = new Deck();
+        deck = new Deck();
         path = Application.dataPath + "/Data/csvjson.json";
         json = File.ReadAllText (path);
-        //Debug.Log(json);
+        Debug.Log(json);
         deck = JsonUtility.FromJson<Deck>("{\"cards\":" + json + "}");
-        //Debug.Log(deck.cards[20].title);
+        //Debug.Log("Card 21 title" + deck.cards[20].title);
     }
 
     // Update is called once per frame
